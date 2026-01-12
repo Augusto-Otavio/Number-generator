@@ -16,24 +16,53 @@
       <h1>Sorteador de números</h1>
     </header>
 
-    <section id="form">
+    <section id="content-form">
       <header>
         <span>Quero sortear:</span>
         <p>Defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
       </header>
 
-      <div class="fields">
-        <div class="number-wrapper">
-          <label for="quantity">NÚMEROS</label>
-          <input type="number" id="quantity">
+      <form class="form">
+        <div class="fields">
+          <div class="number-wrapper">
+            <label for="quantity">NÚMEROS</label>
+            <input type="number" id="quantity">
+          </div>
+          <div class="number-wrapper">
+            <label for="min-number">DE</label>
+            <input type="number" id="min-number">
+          </div>
+          <div class="number-wrapper">
+            <label for="max-number">DE</label>
+            <input type="number" id="max-number">
+          </div>
         </div>
-        <div class="number-wrapper">
-          <label for="min-number">DE</label>
-          <input type="number" id="min-number">
+        <div class="option-toggle">
+          <input type="checkbox" name="do-not-repeat-number" id="do-not-repeat-number">
         </div>
-        <div class="number-wrapper">
-          <label for="max-number">DE</label>
-          <input type="number" id="max-number">
+        <button type="submit">SORTEAR <img src="/assets/icons/button-go.svg" alt="Ícone de seta"></button>
+      </form>
+    </section>
+    
+    <section class="faq-section">
+      <div class="faq-item">
+        <div class="faq-icon">
+          <img src="/assets/icons/icon-people.svg" alt="Ícone de pessoa com dúvida">
+        </div>
+        <div class="faq-content">
+          <span>Como funciona o sorteador de números?</span>
+          <p>O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado pelo usuário.</p>
+        </div>
+      </div>
+    </section>
+    <section class="faq-section">
+      <div class="faq-item">
+        <div class="faq-icon">
+          <img src="/assets/icons/icon-people.svg" alt="Ícone de pessoa com dúvida">
+        </div>
+        <div class="faq-content">
+          <span>Como funciona o sorteador de números?</span>
+          <p>O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado pelo usuário.</p>
         </div>
       </div>
     </section>
