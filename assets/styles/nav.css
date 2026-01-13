@@ -1,0 +1,21 @@
+nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 4.4rem;
+}
+
+main {
+  & header {
+    & span[aria-label] {
+
+      &::after {
+        content: attr(aria-label);
+        background: var(--gradient-content);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        font: var(--overline);
+      }
+    }
+  }
+}
