@@ -1,0 +1,30 @@
+.fields {
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.number-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="number"] {
+  all: unset;
+  width: 8.6rem;
+  height: 5.6rem;
+  background-color: var(--background-secondary);
+  border-radius: 0.8rem;
+  font: var(--display-small);
+  color: var(--content-primary);
+  text-align: center;
+}
+
+.label-number {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.8rem;
+  font: var(--label-small);
+  color: var(--content-secondary);
+  text-transform: uppercase;
+}

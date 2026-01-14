@@ -1,0 +1,18 @@
+main {
+
+  & #content-form {
+    & header {
+      & span {
+        font: var(--label-medium);
+        color: var(--content-primary);
+        text-transform: uppercase;
+      }
+
+      & p {
+        font: var(--paragraph-medium);
+        color: var(--content-tertiary);
+        margin-block: 0.2rem 4rem;
+      }
+    }
+  }
+}
