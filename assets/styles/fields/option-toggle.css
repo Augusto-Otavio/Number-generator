@@ -1,22 +1,38 @@
-.option-toggle {
-  position: relative;
+.toggle-group {
 
-
-  input[type="checkbox"] {
-    all: unset;
+  .option-toggle {
+    position: relative;
     width: 3rem;
     height: 2rem;
     padding: 0.3rem 0.3rem;
-    background: var(--gradient-background);
+    background: var(--content-tertiary);
     border-radius: 1.6rem;
-  }
 
-  .checkbox-circle {
-    position: absolute;
-    inset: 0;
-    width: 1.4rem;
-    height: 1.4rem;
-    background-color: var(--content-primary);
-    border-radius: 50%;
+    input[type="checkbox"] {
+      all: unset;
+      position: absolute;
+      z-index: 2;
+      inset: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      width: 1.4rem;
+      height: 1.4rem;
+      margin: 0.3rem ;
+      background-color: var(--content-primary);
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    &:has(input:checked) {
+      background: var(--gradient-background);
+
+      &::before {
+        transform: translateX(1rem);
+      }
+    }
   }
 }
