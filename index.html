@@ -7,75 +7,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sorteador de Números</title>
   <link rel="stylesheet" href="./assets/styles/index.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <nav>
-    <img src="./assets/icons/logo.svg" alt="logo" class="logo">
-  </nav>
-
-  <main class="px-base">
+  <div id="container" class="px-base py-base">
+    
     <header>
-      <span aria-label="ONLINE - GRATUITO"></span>
-      <h1>Sorteador de números</h1>
+      <nav>
+        <img src="./assets/icons/logo.svg" alt="logo" class="logo">
+      </nav>
     </header>
 
-    <section id="content-form">
+    <main>
       <header>
-        <span>Quero sortear:</span>
-        <p>Defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
+        <span aria-label="ONLINE - GRATUITO"></span>
+        <h1>Sorteador de números</h1>
       </header>
 
-      <form class="form" enctype="multipart/form-data">
-        <div class="fields">
-          <div class="number-wrapper">
-            <label class="label-number" for="quantity">Números</label>
-            <input type="number" id="quantity">
+      <section id="content-form">
+        <header>
+          <span>Quero sortear:</span>
+          <p>Defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
+        </header>
+
+        <form class="form" enctype="multipart/form-data">
+          <div class="fields">
+            <div class="number-wrapper">
+              <label class="label-number" for="quantity">Números</label>
+              <input type="number" id="quantity">
+            </div>
+            <div class="number-wrapper">
+              <label class="label-number" for="min-number">De</label>
+              <input type="number" id="min-number">
+            </div>
+            <div class="number-wrapper">
+              <label class="label-number" for="max-number">De</label>
+              <input type="number" id="max-number">
+            </div>
           </div>
-          <div class="number-wrapper">
-            <label class="label-number" for="min-number">De</label>
-            <input type="number" id="min-number">
+          <div class="toggle-group">
+            <div class="option-toggle">
+              <input type="checkbox" name="do-not-repeat-number" id="do-not-repeat-number">
+            </div>
+            <label for="do-not-repeat-number">Não repetir número</label>
           </div>
-          <div class="number-wrapper">
-            <label class="label-number" for="max-number">De</label>
-            <input type="number" id="max-number">
-          </div>
-        </div>
-        <div class="toggle-group">
-          <div class="option-toggle">
-            <input type="checkbox" name="do-not-repeat-number" id="do-not-repeat-number">
-          </div>
-          <label for="do-not-repeat-number">Não repetir número</label>
-        </div>
 
 
-        <button type="submit">Sortear <img src="/assets/icons/button-go.svg" alt="Ícone de seta"></button>
-      </form>
-    </section>
-    
-    <section class="faq-section">
-      <div class="faq-item">
-        <div class="faq-icon">
-          <img src="./assets/icons/icon-people.svg" alt="Ícone de pessoa com dúvida">
+          <button type="submit">Sortear <img src="/assets/icons/button-go.svg" alt="Ícone de seta"></button>
+        </form>
+      </section>
+      
+      <section class="faq-section">
+        <div class="faq-item">
+          <div class="faq-icon">
+            <img src="./assets/icons/icon-people.svg" alt="Ícone de pessoa com dúvida">
+          </div>
+          <div class="faq-content">
+            <span>Como funciona o sorteador de números?</span>
+            <p>O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado pelo usuário.</p>
+          </div>
         </div>
-        <div class="faq-content">
-          <span>Como funciona o sorteador de números?</span>
-          <p>O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado pelo usuário.</p>
+
+        <div class="faq-item">
+          <div class="faq-icon">
+            <img src="./assets/icons/icon-people.svg" alt="Ícone de pessoa com dúvida">
+          </div>
+          <div class="faq-content">
+            <span>Posso escolher o intervalo dos números?</span>
+            <p>Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.</p>
+          </div>
         </div>
-      </div>
-    </section>
-    <section class="faq-section">
-      <div class="faq-item">
-        <div class="faq-icon">
-          <img src="./assets/icons/icon-people.svg" alt="Ícone de pessoa com dúvida">
-        </div>
-        <div class="faq-content">
-          <span>Como funciona o sorteador de números?</span>
-          <p>O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado pelo usuário.</p>
-        </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
+  </div>
 </body>
 </html>

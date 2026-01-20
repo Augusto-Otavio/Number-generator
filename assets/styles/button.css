@@ -1,0 +1,15 @@
+button {
+  all: unset;
+  width: 31.9rem;
+  height: 5.6rem;
+  display: flex;
+  margin-top: 4rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  background-color: var(--background-tertiary);
+  border-radius: 0.8rem;
+  font: var(--label-medium);
+  color: var(--content-primary);
+  text-transform: uppercase;
+}

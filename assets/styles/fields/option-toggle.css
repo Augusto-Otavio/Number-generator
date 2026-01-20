@@ -1,4 +1,7 @@
 .toggle-group {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
 
   .option-toggle {
     position: relative;
@@ -8,7 +11,7 @@
     background: var(--content-tertiary);
     border-radius: 1.6rem;
 
-    input[type="checkbox"] {
+    & input[type="checkbox"] {
       all: unset;
       position: absolute;
       z-index: 2;
@@ -25,6 +28,8 @@
       background-color: var(--content-primary);
       border-radius: 50%;
       z-index: 1;
+      transform: translateX(0); 
+      transition: transform 0.1s linear;
     }
 
     &:has(input:checked) {
@@ -34,5 +39,10 @@
         transform: translateX(1rem);
       }
     }
+  }
+
+  & label {
+    font: var(--label-alert);
+    color: var(--content-primary);
   }
 }

@@ -1,0 +1,24 @@
+.faq-section {
+  margin-top: 8rem;
+
+  & .faq-item {
+    display: flex;
+    gap: 0.8rem;
+
+    & .faq-content {
+      & span {
+        font: var(--paragraph-medium);
+        color: var(--content-brand);
+      }
+
+      & p {
+        font: var(--paragraph-small);
+        color: var(--content-secondary);
+      }
+    }
+  }
+
+  & .faq-item:nth-child(2) {
+    margin-top: 3.6rem;
+  }
+}
