@@ -5,11 +5,12 @@
 
   .option-toggle {
     position: relative;
-    width: 3rem;
+    width: 3reçm;
     height: 2rem;
     padding: 0.3rem 0.3rem;
     background: var(--content-tertiary);
     border-radius: 1.6rem;
+    cursor: pointer;
 
     & input[type="checkbox"] {
       all: unset;

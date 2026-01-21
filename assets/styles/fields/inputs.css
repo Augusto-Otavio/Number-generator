@@ -2,29 +2,73 @@
   display: flex;
   gap: 1.2rem;
   margin-bottom: 2rem;
-}
 
-.number-wrapper {
-  display: flex;
-  flex-direction: column;
+    & .number-group {
+      display: flex;
+      flex-direction: column;
+
+    & .label-number {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0.8rem;
+      font: var(--label-small);
+      color: var(--content-secondary);
+      text-transform: uppercase;
+    }
+
+    & .number-wrapper {
+      position: relative;
+      width: 8.6rem;
+      height: 5.6rem;
+      background-color: var(--background-secondary);
+      font: var(--display-small);
+      border-radius: 0.8rem;
+      color: var(--content-primary);
+      text-align: center;
+      
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        background: var(--gradient-border);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      
+
+      &::after {
+        content: '';
+        position: absolute;
+        inset: 0.1rem;
+        border-radius: inherit;
+        background-color: var(--background-secondary);
+        z-index: 0;
+      }
+      
+      &:hover,
+      &:focus-within {
+        &::after {
+          background-color: var(--background-tertiary);
+        }
+      }
+
+      &:hover::before,
+      &:focus-within::before {
+        opacity: 1;
+      }
+    }
+  }
 }
 
 input[type="number"] {
   all: unset;
-  width: 8.6rem;
-  height: 5.6rem;
-  background-color: var(--background-secondary);
-  border-radius: 0.8rem;
-  font: var(--display-small);
-  color: var(--content-primary);
-  text-align: center;
-}
+  inset: 0;
+  position: absolute;
+  z-index: 1;
 
-.label-number {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 0.8rem;
-  font: var(--label-small);
-  color: var(--content-secondary);
-  text-transform: uppercase;
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+    appearance: none;
+  }
 }
