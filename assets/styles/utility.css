@@ -1,0 +1,20 @@
+.px-base {
+  padding-inline: var(--px-base);
+}
+
+.py-base {
+  padding-block: var(--py-base)
+}
+
+.container {
+  --max-width: 375px;
+  width: min(var(--max-width), 100% - var(--px-base) * 2);
+  margin-inline: auto;
+  padding-block: var(--py-base);
+}
+
+@media (width >= 80em) {
+  .container {
+    --max-width: 0;
+  }
+}

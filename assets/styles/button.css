@@ -13,3 +13,9 @@ button {
   color: var(--content-primary);
   text-transform: uppercase;
 }
+
+@media (width >= 80em) {
+  button {
+    width: 100%;
+  }
+}

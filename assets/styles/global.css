@@ -52,6 +52,9 @@
   --label-medium: 700 2rem/150% var(--ff-roboto-flex);
   --label-small: 700 1.6rem/150% var(--ff-roboto-flex);
   --label-alert: 400 1.2rem/150% var(--ff-inter);
+
+  --px-base: 3.5rem;
+  --py-base: 4.4rem;
 }
 
 html {
@@ -64,11 +67,12 @@ body {
   height: 100vh;
 }
 
-.px-base {
-  padding-inline: 3.5rem;
-}
-
-.py-base {
-  padding-block: 4.4rem;
+@media (width >= 80em) {
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 

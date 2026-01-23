@@ -1,6 +1,35 @@
+nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4.6rem;
+}
+
 main {
 
+  & > header {
+    & span[aria-label] {
+
+      &::after {
+        content: attr(aria-label);
+        background: var(--gradient-content);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        font: var(--overline);
+      }
+    }
+
+    & h1 {
+      font: var(--display-medium);
+      color: var(--content-primary);
+      text-transform: uppercase;
+      margin-block: 0.8rem 4.2rem;
+    }
+  }
+
   & #content-form {
+    padding-block: 3.4rem;
+    
     & header {
       & span {
         font: var(--label-medium);
@@ -13,6 +42,55 @@ main {
         color: var(--content-tertiary);
         margin-block: 0.2rem 4rem;
       }
+    }
+  }
+}
+
+@media (width >= 80em) {
+  
+  nav {
+    justify-content: start;
+    margin-bottom: 8.9rem;
+  }
+
+  main {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 50.8rem 48.2rem;
+    grid-template-areas: 
+    "header form"
+    "faq form";
+   
+    column-gap: 10.8rem;
+
+    & > header {
+      width: 50;
+      grid-area: header;
+    }
+
+    & .faq-section {
+      width: 38.6rem;
+      margin-top: 0;
+      grid-area: faq;
+    }
+
+    & #content-form {
+      grid-area: form;
+
+      & span {
+        font: var(--label-large);
+      }
+      & p {
+        font: var(--paragraph-large);
+      }
+    }
+
+    & > header {
+      & h1 {
+        font: var(--display-large);
+        margin-block: 1.2rem 3.8rem;
+      }
+
     }
   }
 }
