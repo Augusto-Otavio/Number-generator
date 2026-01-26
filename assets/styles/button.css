@@ -1,21 +1,86 @@
 button {
   all: unset;
-  width: 31.9rem;
-  height: 5.6rem;
+  position: relative;
   display: flex;
-  margin-top: 4rem;
   justify-content: center;
   align-items: center;
+  width: 31.9rem;
+  height: 5.6rem;
+  margin-top: 4rem;
   gap: 0.8rem;
-  background-color: var(--background-tertiary);
   border-radius: 0.8rem;
   font: var(--label-medium);
   color: var(--content-primary);
   text-transform: uppercase;
+
+  & img, span {
+    position: relative;
+    z-index: 2;
+  }
+
+  &:hover {
+    img {
+      animation: arrow-move 2s infinite ease;
+    }
+  }
+  
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: var(--gradient-border);
+    opacity: 0;
+    background-size: 400% 400%;
+    transition: opacity 0.3s ease;
+    
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0.1rem;
+    border-radius: inherit;
+    background-color: var(--background-tertiary);
+  }
+
+  &:hover::before,
+  &:focus-within::before {
+    opacity: 1;
+    animation: border-flow 4s linear infinite;
+  }
 }
 
 @media (width >= 80em) {
   button {
     width: 100%;
+  }
+}
+
+@keyframes arrow-move {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(1rem);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes border-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
   }
 }
