@@ -52,6 +52,7 @@
   --label-medium: 700 2rem/150% var(--ff-roboto-flex);
   --label-small: 700 1.6rem/150% var(--ff-roboto-flex);
   --label-alert: 400 1.2rem/150% var(--ff-inter);
+  --number-result: 700 4.8rem/150% var(--ff-roboto-mono);
 
   --px-base: 3.5rem;
   --py-base: 4.4rem;

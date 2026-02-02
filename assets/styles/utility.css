@@ -13,6 +13,30 @@
   padding-block: var(--py-base);
 }
 
+.number-result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8.4rem;
+  height: 10rem;
+  font: var(--number-result);
+  color: var(--content-brand);
+}
+
+.hidden {
+  display: none;
+}
+
+.label-large {
+  font: var(--label-medium);
+  color: var(--content-primary);
+}
+
+.overline {
+  font: var(--overline);
+  color: var(--content-secondary);
+}
+
 @media (width >= 80em) {
   .container {
     --max-width: 0;

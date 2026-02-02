@@ -44,6 +44,27 @@ main {
       }
     }
   }
+
+  #result-numbers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .container-numbers {
+      display: flex;
+      gap: 1.6rem;
+      margin-top: 4.0rem;
+    }
+
+    header {
+      display: flex;
+      gap: 0.4rem;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 }
 
 @media (width >= 80em) {
