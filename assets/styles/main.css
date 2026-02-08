@@ -28,7 +28,7 @@ main {
   }
 
   & #content-form {
-    padding-block: 3.4rem;
+    max-width: 31.8rem;
     
     & header {
       & span {
@@ -45,19 +45,22 @@ main {
     }
   }
 
-  #result-numbers {
+  & #result-numbers {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    .container-numbers {
+    & .container-numbers {
       display: flex;
-      gap: 1.6rem;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.4rem;
       margin-top: 4.0rem;
     }
 
-    header {
+    & header {
       display: flex;
       gap: 0.4rem;
       flex-direction: column;
@@ -69,21 +72,25 @@ main {
 
 @media (width >= 80em) {
   
-  nav {
+  & nav {
     justify-content: start;
     margin-bottom: 8.9rem;
   }
 
-  main {
+  & main {
     display: grid;
     justify-content: center;
     grid-template-columns: 50.8rem 48.2rem;
     grid-template-areas: 
     "header form"
     "faq form";
-   
     column-gap: 10.8rem;
 
+    & #content-form {
+      max-width: 48.2rem;
+      padding-block: 3.4rem;
+    }
+   
     & > header {
       width: 50;
       grid-area: header;

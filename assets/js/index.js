@@ -77,18 +77,25 @@ function showResult(numbers) {
     const containerNumbers = document.createElement("div")
     containerNumbers.classList.add("container-numbers")
   
-  numbers.forEach((number) => {
+  numbers.forEach((number, index) => {
 
-    cons
+    const card = document.createElement("div")
+    card.classList.add("number-card")
 
+    const numberSlot = document.createElement("div")
+    numberSlot.classList.add("number-slot")
 
     const valueNumber = document.createElement("span")
     valueNumber.classList.add("number-result")
     valueNumber.textContent = number
 
-    containerNumbers.append(valueNumber)
-    
-    resultContainer.appendChild(containerNumbers)
+    const delay = index * 2.6
+    card.style.animationDelay = `${delay}s`
+    valueNumber.style.animationDelay = `${delay}s`
+
+    numberSlot.append(card, valueNumber)
+    containerNumbers.appendChild(numberSlot)
   });
 
+  resultContainer.appendChild(containerNumbers)
 }

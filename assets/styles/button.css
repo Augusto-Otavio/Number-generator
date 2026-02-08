@@ -4,7 +4,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 31.9rem;
+  width: 100%;
   height: 5.6rem;
   margin-top: 4rem;
   gap: 0.8rem;
@@ -48,12 +48,6 @@ button {
   &:focus-within::before {
     opacity: 1;
     animation: border-flow 4s linear infinite;
-  }
-}
-
-@media (width >= 80em) {
-  button {
-    width: 100%;
   }
 }
 

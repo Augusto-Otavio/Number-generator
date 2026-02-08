@@ -13,14 +13,33 @@
   padding-block: var(--py-base);
 }
 
+.number-slot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.number-card {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  background-color: var(--content-brand);
+  border-radius: 2.8rem;
+  animation: cardDrop 2.5s ease forwards;
+  animation-fill-mode: both;
+}
+
 .number-result {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 8.4rem;
   height: 10rem;
   font: var(--number-result);
-  color: var(--content-brand);
+  animation: numberAppear 2.5s ease forwards;
+  animation-fill-mode: both;
 }
 
 .hidden {
@@ -35,6 +54,52 @@
 .overline {
   font: var(--overline);
   color: var(--content-secondary);
+}
+
+@keyframes cardDrop {
+  0% {
+    opacity: 0;
+    transform: scale(0.4) rotate(0deg);
+  }
+
+  20% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+
+  75% {
+    opacity: 1;
+    transform: scale(1) rotate(360deg);
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes numberAppear {
+  0% {
+    opacity: 0;
+  }
+
+  35% {
+    opacity: 0;
+  }
+
+  45% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+    color: var(--color-inverse);
+  }
+
+  100% {
+    opacity: 1;
+    color: var(--content-brand);
+  }
 }
 
 @media (width >= 80em) {
