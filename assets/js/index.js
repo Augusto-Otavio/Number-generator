@@ -5,14 +5,19 @@ const drawCount = document.getElementById("quantity-number")
 const noRepeat = document.getElementById("do-not-repeat-number")
 const resultContainer = document.getElementById("result-numbers")
 const contentForm = document.getElementById("content-form")
+const btnAgain = document.getElementById("button-again")
 
 btnDraw.onclick = (event) => {
   event.preventDefault()
 
-  const minNumber = Number(min.value)
-  const maxNumber = Number(max.value)
-  const drawCountNumber = Number(drawCount.value)
+  const minNumber = Number(min.value.trim())
+  const maxNumber = Number(max.value.trim())
+  const drawCountNumber = Number(drawCount.value.trim())
   const noRepeatChecked = noRepeat.checked
+
+  if(!validateInputs(minNumber, maxNumber, drawCountNumber)) {
+    return
+  }
 
   let result 
 
@@ -25,6 +30,19 @@ btnDraw.onclick = (event) => {
   showResult(result)
 
   contentForm.classList.add("hidden")
+
+  const fullTime = result.length * 2.6
+
+  setTimeout(() => {
+    btnAgain.classList.remove("hidden")
+  }, fullTime * 1000)
+}
+
+btnAgain.onclick = () => {
+  resultContainer.innerHTML = ""
+
+  contentForm.classList.remove("hidden")
+  btnAgain.classList.add("hidden")
 }
 
 function drawNumber(drawCount, min, max) {
@@ -74,8 +92,8 @@ function showResult(numbers) {
   header.append(spanTitle, resultName)
   resultContainer.appendChild(header)
 
-    const containerNumbers = document.createElement("div")
-    containerNumbers.classList.add("container-numbers")
+  const containerNumbers = document.createElement("div")
+  containerNumbers.classList.add("container-numbers")
   
   numbers.forEach((number, index) => {
 
@@ -98,4 +116,28 @@ function showResult(numbers) {
   });
 
   resultContainer.appendChild(containerNumbers)
+}
+
+function validateInputs(min, max, quantity) {
+  if(Number.isNaN(min) || Number.isNaN(max) || Number.isNaN(quantity)) {
+    alert("Preencha todos os campos.")
+    return false
+  }
+
+  if(min < 1 || max > 100) {
+    alert("O intervalo deve ser de 1 a 100.")
+    return false
+  }
+
+  if(min >= max) {
+    alert("O número minímo deve ser menor que o máximo.")
+    return false
+  }
+
+  if(quantity < 1) {
+    alert("A quantidade deve ser maior que zero.")
+    return false
+  }
+
+  return true
 }

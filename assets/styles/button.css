@@ -9,7 +9,7 @@ button {
   margin-top: 4rem;
   gap: 0.8rem;
   border-radius: 0.8rem;
-  font: var(--label-medium);
+  font: var(--label-btn);
   color: var(--content-primary);
   text-transform: uppercase;
 

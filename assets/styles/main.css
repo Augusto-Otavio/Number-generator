@@ -50,6 +50,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 5.9rem;
 
     & .container-numbers {
       display: flex;
@@ -71,7 +72,6 @@ main {
 }
 
 @media (width >= 80em) {
-  
   & nav {
     justify-content: start;
     margin-bottom: 8.9rem;
@@ -118,7 +118,6 @@ main {
         font: var(--display-large);
         margin-block: 1.2rem 3.8rem;
       }
-
     }
   }
 }
