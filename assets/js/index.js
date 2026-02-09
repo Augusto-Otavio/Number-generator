@@ -35,14 +35,17 @@ btnDraw.onclick = (event) => {
 
   setTimeout(() => {
     btnAgain.classList.remove("hidden")
+    btnAgain.classList.remove("opacity-0")
+    btnAgain.classList.add("show")
   }, fullTime * 1000)
 }
 
 btnAgain.onclick = () => {
   resultContainer.innerHTML = ""
 
-  contentForm.classList.remove("hidden")
-  btnAgain.classList.add("hidden")
+   btnAgain.classList.remove("show")
+   btnAgain.classList.add("hidden")
+   contentForm.classList.remove("hidden")
 }
 
 function drawNumber(drawCount, min, max) {

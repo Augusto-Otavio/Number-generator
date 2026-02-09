@@ -51,6 +51,10 @@ button {
   }
 }
 
+#button-again {
+  opacity: 0;
+}
+
 @keyframes arrow-move {
   0% {
     transform: translateX(0);

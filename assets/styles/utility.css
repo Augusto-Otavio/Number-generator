@@ -46,6 +46,15 @@
   display: none;
 }
 
+.opacity-0 {
+  opacity: 0;
+}
+
+.show {
+  opacity: 1;
+  animation: fadeUp 0.4s ease forwards;
+}
+
 .label-large {
   font: var(--label-medium);
   color: var(--content-primary);
@@ -99,6 +108,16 @@
   100% {
     opacity: 1;
     color: var(--content-brand);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
 
